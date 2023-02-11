@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="./assets/css/tailwind.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app flex justify-center items-center h-screen">
+
+        <div
+            class="calculator bg-[#22252D] w-full max-w-[375px] min-h-[640px] flex flex-col rounded-3xl overflow-hidden">
+
+            <div class="display min-h-[200px] p-6 flex justify-end items-end text-white text-right flex-1 ">
+                <div class="content flex flex-col justify-end w-full max-w-full ">
+                    <div class="input text-lg mb-2 w-full"></div>
+                    <div class="output text-5xl font-bold w-full whitespace-nowrap "></div>
+                </div>
+            </div>
+
+            <div class="keys bg-[#292D36] p-6 rounded-t-3xl grid grid-cols-4 grid-rows-5 gap-4 shadow-md">
+
+                <div data-key="clear"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key action">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#26FED7]">AC</span>
+                </div>
+
+                <div data-key="brackets"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key action">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#26FED7]">(
+                        )</span>
+                </div>
+
+                <div data-key="%"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key action">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#26FED7]">%</span>
+                </div>
+
+                <div data-key="/"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key operator">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#EB6666]">÷</span>
+                </div>
+
+                <div data-key="7"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">7</span>
+                </div>
+
+                <div data-key="8"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">8</span>
+                </div>
+
+                <div data-key="9"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">9</span>
+                </div>
+
+                <div data-key="*"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key operator">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#EB6666]">x</span>
+                </div>
+
+                <div data-key="4"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">4</span>
+                </div>
+
+                <div data-key="5"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">5</span>
+                </div>
+
+                <div data-key="6"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">6</span>
+                </div>
+
+                <div data-key="-"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key operator">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#EB6666]">-</span>
+                </div>
+
+                <div data-key="1"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">1</span>
+                </div>
+
+                <div data-key="2"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">2</span>
+                </div>
+
+                <div data-key="3"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">3</span>
+                </div>
+
+                <div data-key="+"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key operator">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#EB6666]">+</span>
+                </div>
+
+                <div data-key="backspace"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key action">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#26FED7]">&lt;</span>
+                </div>
+
+                <div data-key="0"
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">0</span>
+                </div>
+
+                <div data-key="."
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">.</span>
+                </div>
+
+                <div data-key="="
+                    class="key relative cursor-pointer block h-0 pt-[100%] bg-[#262933] rounded-2xl transition-all duration-200 select-none hover:shadow-key operator">
+                    <span
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-[#EB6666]">=</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>
