@@ -533,6 +533,26 @@ body {
   top: 50%;
 }
 
+.mx-\[1px\] {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.mx-\[2px\] {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.mx-\[4px\] {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -549,28 +569,20 @@ body {
   display: grid;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-0 {
   height: 0px;
 }
 
-.max-h-52 {
-  max-height: 13rem;
-}
-
-.max-h-\[640px\] {
-  max-height: 640px;
-}
-
-.min-h-\[640px\] {
-  min-height: 640px;
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-\[200px\] {
   min-height: 200px;
+}
+
+.min-h-\[640px\] {
+  min-height: 640px;
 }
 
 .w-full {
@@ -653,12 +665,12 @@ body {
   white-space: nowrap;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-t-3xl {
@@ -671,14 +683,14 @@ body {
   background-color: rgb(34 37 45 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#292D36\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(41 45 54 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#262933\] {
   --tw-bg-opacity: 1;
   background-color: rgb(38 41 51 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#292D36\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 45 54 / var(--tw-bg-opacity));
 }
 
 .p-6 {
@@ -693,6 +705,11 @@ body {
   text-align: right;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -703,31 +720,13 @@ body {
   line-height: 1.75rem;
 }
 
-.text-\[2rem\] {
-  font-size: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
-.text-white {
+.text-\[\#26FED7\] {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[EB6666\] {
-  color: EB6666;
+  color: rgb(38 254 215 / var(--tw-text-opacity));
 }
 
 .text-\[\#EB6666\] {
@@ -735,9 +734,9 @@ body {
   color: rgb(235 102 102 / var(--tw-text-opacity));
 }
 
-.text-\[\#26FED7\] {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(38 254 215 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-md {
